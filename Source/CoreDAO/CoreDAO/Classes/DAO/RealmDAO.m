@@ -231,7 +231,8 @@ static NSUInteger databaseVersion;
 
 - (BOOL)defaultRealmPathIsEqualToPath:(NSString *)path
 {
-    return [[RLMRealmConfiguration defaultConfiguration].path isEqualToString:path];
+    NSString *localPath = [[RLMRealmConfiguration defaultConfiguration].fileURL absoluteString];
+    return [localPath isEqualToString:path];
 }
 
 - (NSString *)absolutePathForFilename:(NSString *)name
@@ -244,7 +245,7 @@ static NSUInteger databaseVersion;
 - (void)assignDefaultRealmPath:(NSString *)path
 {
     RLMRealmConfiguration *configuration = [RLMRealmConfiguration defaultConfiguration];
-    configuration.path = path;
+    configuration.fileURL = path;
     [RLMRealmConfiguration setDefaultConfiguration:configuration];
 }
 
