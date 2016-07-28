@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
    s.frameworks = 'Realm'
    s.module_map = 'Source/Module.modulemap'
    s.compiler_flags = "-DREALM_HAVE_CONFIG -DREALM_COCOA_VERSION='@\"#{s.version}\"' -D__ASSERTMACROS__"
+   s.dependency 'Realm', '~> 1.0'
 
    s.requires_arc = true
 end
