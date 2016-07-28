@@ -1,0 +1,6 @@
+framework module CoreDAO {
+  umbrella header "CoreDAO.h"
+
+  export *
+  module * { export * }
+}
