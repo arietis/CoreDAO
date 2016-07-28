@@ -8,10 +8,10 @@ Pod::Spec.new do |s|
    s.author = 'RMR + AGIMA'
 
    s.source = { :git => 'https://github.com/Klimowsa/CoreDAO.git', :tag => s.version }
-   s.source_files = 'Source/CoreDAO/CoreDAO/Classes/*.[hm]'
+   s.source_files = 'Source/CoreDAO/**/*.{h,m}'
 
+   s.platform = :ios
    s.ios.deployment_target = '8.0'
-   s.osx.deployment_target = '10.10'
 
    s.frameworks = 'CoreData'
 
