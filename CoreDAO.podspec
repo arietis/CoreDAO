@@ -5,8 +5,9 @@ Pod::Spec.new do |s|
 
    s.summary = 'Lib CoreDAO'
    s.homepage = 'https://github.com/Klimowsa/CoreDAO'
+   s.author = 'RMR + AGIMA'
 
-   s.source = { :git => 'https://github.com/Klimowsa/CoreDAO', :tag => s.version }
+   s.source = { :git => 'https://github.com/Klimowsa/CoreDAO.git', :tag => s.version }
    s.source_files = 'Source/'
 
    s.ios.deployment_target = '8.0'
