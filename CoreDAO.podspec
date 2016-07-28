@@ -9,6 +9,8 @@ Pod::Spec.new do |s|
 
    s.source = { :git => 'https://github.com/Klimowsa/CoreDAO.git', :tag => s.version }
    s.source_files = 'Source/CoreDAO/**/*.{h,m}'
+   s.public_header_files = "Source/CoreDAO/**/*.h"
+
 
    s.platform = :ios
    s.ios.deployment_target = '8.0'
