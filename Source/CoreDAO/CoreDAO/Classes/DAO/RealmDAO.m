@@ -245,7 +245,7 @@ static NSUInteger databaseVersion;
 - (void)assignDefaultRealmPath:(NSString *)path
 {
     RLMRealmConfiguration *configuration = [RLMRealmConfiguration defaultConfiguration];
-    configuration.fileURL = path;
+    configuration.fileURL = [[NSURL alloc] initWithString:path];
     [RLMRealmConfiguration setDefaultConfiguration:configuration];
 }
 
